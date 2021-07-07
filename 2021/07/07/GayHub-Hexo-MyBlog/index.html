@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"xl-c137.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="GayHub+Hexo 搭建个人网站To Rick Sanchez (I don’t know why, but I’m really into R&amp;M these days) 本机环境：Windows 10, git version 2.22.0.windows.1, node version v10.16.0  技术介绍Gayhub是什么就不介绍了，简单来说就是一个全球最大的同性交友网">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GayHub+Hexo&#x3D;MyBlog">
+<meta property="og:url" content="https://xl-c137.github.io/2021/07/07/GayHub-Hexo-MyBlog/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="GayHub+Hexo 搭建个人网站To Rick Sanchez (I don’t know why, but I’m really into R&amp;M these days) 本机环境：Windows 10, git version 2.22.0.windows.1, node version v10.16.0  技术介绍Gayhub是什么就不介绍了，简单来说就是一个全球最大的同性交友网">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-07-06T17:06:50.000Z">
+<meta property="article:modified_time" content="2021-07-06T18:57:56.715Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://xl-c137.github.io/2021/07/07/GayHub-Hexo-MyBlog/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>GayHub+Hexo=MyBlog | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://xl-c137.github.io/2021/07/07/GayHub-Hexo-MyBlog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          GayHub+Hexo=MyBlog
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-07-07 01:06:50 / Modified: 02:57:56" itemprop="dateCreated datePublished" datetime="2021-07-07T01:06:50+08:00">2021-07-07</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="GayHub-Hexo-搭建个人网站"><a href="#GayHub-Hexo-搭建个人网站" class="headerlink" title="GayHub+Hexo 搭建个人网站"></a>GayHub+Hexo 搭建个人网站</h1><h5 id="To-Rick-Sanchez-I-don’t-know-why-but-I’m-really-into-R-amp-M-these-days"><a href="#To-Rick-Sanchez-I-don’t-know-why-but-I’m-really-into-R-amp-M-these-days" class="headerlink" title="To Rick Sanchez (I don’t know why, but I’m really into R&amp;M these days)"></a><em>To Rick Sanchez (I don’t know why, but I’m really into R&amp;M these days)</em></h5><blockquote>
+<p>本机环境：Windows 10, git version 2.22.0.windows.1, node version v10.16.0</p>
+</blockquote>
+<h5 id="技术介绍"><a href="#技术介绍" class="headerlink" title="技术介绍"></a>技术介绍</h5><p>Gayhub是什么就不介绍了，简单来说就是一个全球最大的同性交友网站（自豪<br>Hexo就是一个可以把你写的Markdown转为静态网页并托管给gayhub的好东西</p>
+<h5 id="Installations-and-other-stuff-除特殊说明没有先后顺序之分"><a href="#Installations-and-other-stuff-除特殊说明没有先后顺序之分" class="headerlink" title="Installations and other stuff (除特殊说明没有先后顺序之分)"></a>Installations and other stuff (除特殊说明没有先后顺序之分)</h5><ul>
+<li>✨Git Bash&amp;Node.js安装✨：官网下载最新版本并安装即可</li>
+<li>✨Github注册并新建一个仓库✨：注意仓库名需为 <username>.github.io</li>
+<li>✨Hexo安装✨：<br>  使用Git Bash全局安装<br>  <code> npm install -g hexo</code></li>
+</ul>
+<p>之后我们分2个方向完成搭建</p>
+<h5 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h5><ol>
+<li>把刚才创建的仓库Clone到本地，随便哪都行<br> <code>git clone [url]</code> e.g. :<br> <code>$ git clone https://github.com/username/repositoryname.git</code></li>
+<li>本地新建html<br> 在刚才clone到本地的文件夹下，新建一个index.html</li>
+<li>代码push到github<pre><code class="shell">git add .
+git commit -m [message]
+git push origin main # 现在main是default
+</code></pre>
+</li>
+<li>测试<br> 打开<a href="https://xl-c137.github.io/">https://username.github.io/</a> 可以看到你刚才写的html网页就代表ok了</li>
+</ol>
+<h5 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h5><ol>
+<li><p>选一个地方放你的hexo文件夹</p>
+</li>
+<li><p>在hexo所在文件夹下运行git bash</p>
+</li>
+<li><p>执行以下命令<br> <code>$ hexo init # Hexo会自动建立需要的文件</code><br> <code>$ npm install # 安装所需依赖包</code></p>
+</li>
+<li><p>本地打开<br> <code>$ npm install hexo-server --save # 安装server模块</code><br> <code>$ hexo server # 或简写为 hexo s(启动hexo服务器)</code></p>
+</li>
+<li><p>测试<br> 打开<a target="_blank" rel="noopener" href="http://localhost:4000/">localhost:4000</a> 可以看到hexo自带的页面就代表ok了</p>
+</li>
+<li><p>配置hexo<br> 修改hexo文件下的配置文件_config.yml</p>
+<pre><code>deploy:
+type: git
+repo: &lt;repository url&gt; # git@github.com:XL-c137/XL-c137.github.io.git
+branch: [branch] # main
+message: [message] # wubbalubbadubdub, &#123;&#123;now('YYYY-MM-DD HH:mm:ss')&#125;&#125;
+</code></pre>
+<p> 保存即可，这一步是使本地hexo里的文件与.github.io建立关联；</p>
+</li>
+<li><p>在<code>\hexo\public</code>文件夹下生成静态页面<br> 在hexo文件夹下运行Git bash <code>$ hexo generate # (或hexo g)</code></p>
+</li>
+<li><p>部署到github上</p>
+<pre><code>$ hexo deploy # 推送到指定的库分支(配置时指定的), (或hexo d)
+</code></pre>
+</li>
+</ol>
+<h5 id="可能的bug及解决方案"><a href="#可能的bug及解决方案" class="headerlink" title="可能的bug及解决方案"></a>可能的bug及解决方案</h5><p><a target="_blank" rel="noopener" href="https://ask.csdn.net/questions/7436579">hexo g TypeError: line.matchAll is not a function</a><br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/50197798/npm-err-notsup-unsupported-platform-for-n2-1-8-wanted-oswin32-arch">npm ERR! code EBADPLATFORM</a><br>以及，注意现在main才是github的默认主分支(有点坑到眼瞎的我)</p>
+<h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a target="_blank" rel="noopener" href="https://www.lizhechen.com/2017/02/12/github-hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Zhechen’s Personal Website</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/62555815">sufaith-知乎</a><br>关于其他的一些配置和后续操作，我觉得Zhechen就写的挺好，所以不赘述了，此文仅为自己总结一些踏过的坑和搭建博客大概过程。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/07/07/AAA/" rel="prev" title="AAA">
+      <i class="fa fa-chevron-left"></i> AAA
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GayHub-Hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99"><span class="nav-number">1.</span> <span class="nav-text">GayHub+Hexo 搭建个人网站</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#To-Rick-Sanchez-I-don%E2%80%99t-know-why-but-I%E2%80%99m-really-into-R-amp-M-these-days"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">To Rick Sanchez (I don’t know why, but I’m really into R&amp;M these days)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.0.0.0.2.</span> <span class="nav-text">技术介绍</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Installations-and-other-stuff-%E9%99%A4%E7%89%B9%E6%AE%8A%E8%AF%B4%E6%98%8E%E6%B2%A1%E6%9C%89%E5%85%88%E5%90%8E%E9%A1%BA%E5%BA%8F%E4%B9%8B%E5%88%86"><span class="nav-number">1.0.0.0.3.</span> <span class="nav-text">Installations and other stuff (除特殊说明没有先后顺序之分)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#GitHub"><span class="nav-number">1.0.0.0.4.</span> <span class="nav-text">GitHub</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Hexo"><span class="nav-number">1.0.0.0.5.</span> <span class="nav-text">Hexo</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%AF%E8%83%BD%E7%9A%84bug%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">1.0.0.0.6.</span> <span class="nav-text">可能的bug及解决方案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Reference"><span class="nav-number">1.0.0.0.7.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
